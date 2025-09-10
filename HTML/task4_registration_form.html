@@ -1,0 +1,87 @@
+<!-- Registration Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div style="background-color: rgb(57, 136, 150); padding: 20px; border-radius: 10px; max-width: 600px;">
+        <h3 style="color: black;"><center>Registration Form</center></h3>
+        <form>
+            <div style="margin-bottom: 15px;">
+                <label for="firstname" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">First Name</label>
+                <input type="text" id="firstname"
+                name="firstname"
+                        style="width: 90%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;"
+                        placeholder="Enter your First Name">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="lastname" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">Last Name</label>
+                <input type="text" id="lastname" name="lastname"
+                        style="width: 90%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;"
+                        placeholder="Enter your Last Name">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">Email</label>
+                <input type="email" id="email" name="email"
+                        style="width: 90%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;" placeholder="your@example.com">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">Password</label>
+                <input type="password" id="password" name="password"
+                        style="width: 90%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;"
+                        placeholder="Enter your Password">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="age" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">Age</label>
+                <input type="number" id="number" name="number"
+                        style="width: 90%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;"
+                        placeholder="Enter your Age">
+            </div>
+
+            <fieldset style="width: 86%; border: 5px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 15px;">
+                <legend style="font-weight: bold; color: white;">Gender(Select one)</legend>
+
+                <div>
+                    <p><label><input type="radio" name="Gender" value="Male"> Male</label></p>
+                    <p><label><input type="radio" name="Gender" value="Female"> Female</label></p>
+                </div>
+            </fieldset>
+
+            <fieldset style="width: 86%; border: 5px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 15px; ">
+                <legend style="font-weight: bold; color: white;">Interests</legend>
+
+                <div>
+                    <p><label><input type="checkbox" name="language" value="Javascript"> Javascript</label></p>
+                    <p><label><input type="checkbox" name="language" value="Python"> Python</label></p>
+                    <p><label><input type="checkbox" name="language" value="Java"> Java</label></p>
+                    <p><label><input type="checkbox" name="language" value="C#"> C#</label></p>
+                    <p><label><input type="checkbox" name="language" value="PHP"> PHP</label></p>
+                </div>
+            </fieldset>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: white;">Country:</label>
+                <select name="Country" id="Country" style="width: 96%; padding: 8px; border: 5px solid #ddd; border-radius: 5px;">
+                    <option value="">Select your Country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="ng">Nigeria</option>
+                    <option value="gh">Ghana</option>
+                    <option value="ke">Kenya</option>
+                </select>
+            </div>
+            <center><button type="submit" style="background-color: white; color:rgb(57, 136, 150); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                Submit Survey
+            </button></center>
+        </form>
+    </div>
+</body>
+</html>
