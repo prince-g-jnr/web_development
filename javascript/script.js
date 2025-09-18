@@ -14,14 +14,14 @@ about.onclick= ()=>{
 }
 
 contact.onclick= ()=>{
-    // alert("About me clicked")
+    // alert("My Contact clicked")
     about_content.style.display="none"
     contact_content.style.display="block"
     skill_content.style.display="none"
 }
 
 skill.onclick= ()=>{
-    // alert("About me clicked")
+    // alert("My skills clicked")
     about_content.style.display="none"
     contact_content.style.display="none"
     skill_content.style.display="block"
