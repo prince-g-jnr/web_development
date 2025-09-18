@@ -3,6 +3,18 @@
     margin: 0;
 }
 .container{
+    background: #ffffff;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-left: 5px solid #b9c5c1;
+    border-right: 5px solid #b9c5c1;
+    border-bottom: 5px solid #b9c5c1;
+    align-items: center;
+    justify-self: center;
+    margin-top: 15%;
+}
+.header{
     background-color: #b9c5c1;
     display: flex;
     justify-content: center;
