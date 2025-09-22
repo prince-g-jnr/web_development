@@ -1,0 +1,29 @@
+.js-demo{
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 2px solid #ff0000;
+        color: black;
+    }
+    .output{
+        background-color: #e9ecef;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        border-left: 4px solid #286ea7;
+    }
+    .demo-button{
+        background-color: #ff0000;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        margin: 5px;
+    }
+    .demo-button:hover{
+        background-color: #b31500;
+    }
