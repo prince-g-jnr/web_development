@@ -1,3 +1,4 @@
+//  Task 3
 function getGrade() {
 
     let score = Number(prompt("Enter your Grade"))
@@ -17,12 +18,10 @@ function getGrade() {
     } else if (score <= 50) {
         console.log(`Score: ${score} → Go and see Mr Badiru`);
     }
-
-    
 }   
 
 
-
+// Task 4
 function calculatePrice(price, customerType, isFirstPurchase) {
     let discount = 0
 
@@ -33,11 +32,9 @@ function calculatePrice(price, customerType, isFirstPurchase) {
     } else if (customerType == "employee") {
         discount = 0.20;
     }
-
     if (isFirstPurchase) {
         discount += 0.05
     }
-
     let finalprice = price * (1 - discount);
     return {
         orinalPrice: price,
@@ -45,7 +42,6 @@ function calculatePrice(price, customerType, isFirstPurchase) {
         finalprice: finalprice.toFixed(2)
     };
 }
-
 let result = calculatePrice(10000, "student", true);
 console.log("                   Full Receipt          ");
 console.log(`original: $${result.orinalPrice}`);
@@ -53,7 +49,7 @@ console.log(`Discount: ${result.discountPercent}%`);
 console.log(`Final price: $${result.finalprice}`)
 
 
-
+// Task 5
 function weatherAdvice(temperature, isRaining) {
     if (temperature < 32 && isRaining) {
         console.log("Freezing rain! Stay inside!");
@@ -66,13 +62,50 @@ function weatherAdvice(temperature, isRaining) {
     } else if (temperature > 80) {
         console.log("It's hot, stay hydrated!");
     }
-
 advice = isRaining ? "Bring an umbrella" : "No umbrella needed"
-console.log(advice)
-    
+console.log(advice) 
 } 
 weatherAdvice(30, true)
 
-// function atm(balance, action, amount) {
-//     if (balance == withdra )
-// }
+
+// Task 6
+let balance = 20000
+function atm(balance, action, amount) {
+    if (action === "withdraw" ) {
+        if (amount > 500) {
+            return "Maximum with is 500"
+        }else if (balance >= amount) {
+            balance -+ amount;
+            return `Withdrawal Successful. New balance: $${balance}`;
+        } else {
+            return `Insufficient funds. Your balance is $${balance}`;
+        }
+    } else if (action === "deposit") {
+        balance += amount;
+        return `Deposit Successful. New balance: $${balance}`;
+    } else {
+        return "unknow application, use 'withdraw' or 'deposit'";
+    }
+}
+console.log(atm(balance, "deposit", 10000))
+
+
+// Task 7
+function personalAssistant(time, weather, day) {
+    let message = day === "workday" ? "Prepare your mind for work!" :
+                  day === "weekend" ? "Enjoy some rest, it's the weekend!" :
+                  day === "holiday" ? "Enjoy your Holiday!" : "Invalid day selection"
+    message += (weather === "sunny") ? "Remember to take sun protection if you are going out." :
+               (weather === "rainy") ? "Keep an umbrella handy." :
+               (weather === "cloudy") ? "Seem like a calm day ahead." : "Unknown weather status."
+    if (time < 12 && time >=0) {
+        message += "Wishing you a wonderful morning!";
+    } else if (time >= 12 && time < 18) {
+        message += "Wishing you a successful afternoon";
+    } else if (time >=18 && time <= 23) {
+        message += "Settle in for the evening";
+    } else{
+        message += "Unrecognized time format.";
+    }
+    console.log(message);
+}
