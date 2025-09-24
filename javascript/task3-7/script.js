@@ -91,10 +91,10 @@ console.log(atm(balance, "deposit", 10000))
 
 
 // Task 7
-function personalAssistant(time, weather, day) {
-    let message = day === "workday" ? "Prepare your mind for work!" :
-                  day === "weekend" ? "Enjoy some rest, it's the weekend!" :
-                  day === "holiday" ? "Enjoy your Holiday!" : "Invalid day selection"
+function personalAssistant(time, weather, daytype) {
+    let message = daytype === "workday" ? "Prepare your mind for work!" :
+                  daytype === "weekend" ? "Enjoy some rest, it's the weekend!" :
+                  daytype === "holiday" ? "Enjoy your Holiday!" : "Invalid day selection"
     message += (weather === "sunny") ? "Remember to take sun protection if you are going out." :
                (weather === "rainy") ? "Keep an umbrella handy." :
                (weather === "cloudy") ? "Seem like a calm day ahead." : "Unknown weather status."
