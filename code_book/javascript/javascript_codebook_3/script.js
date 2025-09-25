@@ -257,5 +257,74 @@ while (i < numberr.length && !foundOdd) {
     if (numberr[i] % 2 === 1) {   // check if odd
         console.log(`Found odd number: ${numbers[i]}`);
         foundOdd = true;
+    } else {
+        console.log(`${number[i]} is even, continuing...`)
     }
+
+    i++
 }
+
+if (!foundOdd) {
+    console.log("No odd numbers found!")
+}
+
+console.log("");      // Empty line
+
+// do....while loop - runs at least once
+let numberrs = 1;
+
+do {
+    console.log("Number is: " + numberrs);
+    numberrs++;
+} while (numberrs <= 3);
+
+console.log("Loop finished!");
+
+// Array Method that use Functions
+let numbre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+console.log("Original numbers:", numbre);
+
+console.log("");      // Empty line
+
+// forEach() - Do something with each element
+console.log("Using forEach to print each number:");
+numbre.forEach(function(number) {
+    console.log("Numbers:", number)
+});
+
+// More concise with arrow function
+console.log("forEach with arrow function:");
+numbre.forEach(number => console.log(`Value: ${number}`));
+
+console.log("");      // Empty line
+
+// map() - Transform each element and create new array
+console.log("Using map to double each number:");
+let doubles = numbre.map(function(number) {
+    return number * 2;
+});
+console.log("Doubled:", doubles);
+
+// Shorter arrow function version
+let tripled = numbre.map(number => number * 3);
+console.log("Tripled:", tripled);
+
+console.log("");      // Empty line
+
+// filter() - keep only elements that meet condition
+console.log("Using filter to get even numbers:");
+let evenNumbers = numbre.filter(function(number) {
+    return number % 2 === 0;
+});
+console.log("Even numbers:", evenNumbers);
+
+// Get odd numbers with arrow function
+let oddNumbers = numbre.filter(number => number % 2 === 1);
+console.log("Odd numbers:", oddNumbers);
+
+console.log("");      // Empty line
+
+// find() - Get first elemet that meets condition
+let firstBigNumber = numbre.find(number => number > 5);
+console.log("First number > 5:", firstBigNumber)
