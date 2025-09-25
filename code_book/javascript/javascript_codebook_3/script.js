@@ -177,6 +177,8 @@ for (let i = 2; i <= 10; i += 2) { // i += 2 means i = i + 2
     console.log("Even number:", i);
 }
 
+console.log("");      // Empty line
+
 // Loop through an array using index
 let color = ["red", "green", "blue", "yellow"];
 console.log("Colors in the array:");
@@ -184,4 +186,76 @@ for (let i = 0; i < color.length; i++) {
     console.log(`color ${i + 1}: ${color[i]}`);
 }
 
+console.log("");      // Empty line
+
 // For....of Loop and Array Processing
+// for...of loop - easier way to go through array items
+let fruitt = ["apple", "banana", "orange", "grape"];
+
+console.log("Using for...of loop:");
+for (let fruit in fruitt) {
+    console.log("I like", fruit);
+}
+
+console.log("");      // Empty line
+
+// Compare with traditional for loop
+console.log("Using traditional for loop:");
+for (let i = 0; i < fruitt.length; i++) {
+    console.log("I like", fruitt[i])
+}
+
+console.log("");      // Empty line
+
+// Processing numbers with for...of
+let scores = [85, 92, 78, 96, 88];
+let total = 0;
+
+console.log("Calculating average score:");
+for (let score of scores) {
+    console.log("Adding scores:", score);
+    total += score;   // Same as: total + score
+}
+
+let average = total / scores.length;
+console.log(`Total: ${total}, Average: ${average.toFixed(1)}`);
+
+console.log("");      // Empty line
+
+// Building new arrays with loops
+let numberss =[1, 2, 3, 4, 5];
+let doubled = [];
+
+console.log("Original:", numberss);
+console.log("Doubled", doubled);
+
+// While Loops
+
+// While loop - repeats as long as condition is true
+// while (condition) {
+//     code to repeat
+// }
+
+console.log("Basic while loop - counting to 5:");
+let count = 1
+while (count <= 5) {
+    console.log("Count is:", count);
+    count ++  // IMPORTANT: Must change the condition variable!
+}
+
+console.log("");      // Empty line
+
+// While loop processing array until condition met
+let numberr = [2, 4, 6, 8, 3, 10, 12];
+let i = 0;
+let foundOdd = false;
+
+console.log("Looking for first odd number:");
+while (i < numberr.length && !foundOdd) {
+    console.log(`Checking ${numberr[i]}...`);
+
+    if (numberr[i] % 2 === 1) {   // check if odd
+        console.log(`Found odd number: ${numbers[i]}`);
+        foundOdd = true;
+    }
+}
