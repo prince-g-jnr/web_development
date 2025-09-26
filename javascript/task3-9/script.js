@@ -112,6 +112,9 @@ function personalAssistant(time, weather, daytype) {
 
 // Task 8
 // 1
+function isStrongPassword(password) {
+    
+}
 
 // 2
 function formatPercentage(value) {
