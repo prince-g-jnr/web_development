@@ -18,6 +18,6 @@ console.log("Number of items:", shoppingList.length);
 
 console.log("")
 
-for (let i = 0; 1<shoppingList.length; i++) {
+for (let i = 0; i <=  shoppingList.length; i++) {
     console.log(`item ${i + 1}: ${shoppingList[i]}`)
 };

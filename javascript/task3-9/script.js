@@ -109,3 +109,39 @@ function personalAssistant(time, weather, daytype) {
     }
     console.log(message);
 }
+
+// Task 8
+// 1
+
+// 2
+function formatPercentage(value) {
+    return `${value.toFixed(1)}%`
+}
+console.log(formatPercentage(100));
+
+// 3
+function calculateCompoundInterest(principal, rate, years) {
+    let A = principal * (1 + rate)**years
+    return `${A.toFixed(2)}`
+}
+console.log(calculateCompoundInterest(500, 0.5, 2));
+
+// 4
+function canGraduate(credits, gpa) {
+    if(credits >= 120 && gpa >+ 2.0) {
+        return "You can Graduate"
+    } else {
+        return "You cannot Graduate"
+    }
+}
+console.log(canGraduate(200, 3.5))
+
+// 5
+function reverseWord(sentence) {
+    let word = sentence.split(" ")
+    let sentences =word.reverse()
+    return sentences
+}
+console.log(reverseWord('I am a content creator'))
+
+// Task 9
