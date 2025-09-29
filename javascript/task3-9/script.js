@@ -20,7 +20,6 @@ function getGrade() {
     }
 }   
 
-
 // Task 4
 function calculatePrice(price, customerType, isFirstPurchase) {
     let discount = 0
@@ -48,6 +47,7 @@ console.log(`original: $${result.orinalPrice}`);
 console.log(`Discount: ${result.discountPercent}%`);
 console.log(`Final price: $${result.finalprice}`)
 
+console.log("")
 
 // Task 5
 function weatherAdvice(temperature, isRaining) {
@@ -67,6 +67,7 @@ console.log(advice)
 } 
 weatherAdvice(30, true)
 
+console.log("")
 
 // Task 6
 let balance = 20000
@@ -89,6 +90,7 @@ function atm(balance, action, amount) {
 }
 console.log(atm(balance, "deposit", 10000))
 
+console.log("")
 
 // Task 7
 function personalAssistant(time, weather, daytype) {
@@ -113,8 +115,23 @@ function personalAssistant(time, weather, daytype) {
 // Task 8
 // 1
 function isStrongPassword(password) {
-    
+    const length = password.length >= 8;
+    const number = /[123456789]/.test(password);
+    const specialChar = /[&$#@_-]/.test(password);
+
+    if (length === false) {
+        return "Enter a password with a minimum of 8 characters"
+    } else if (number === false) {
+        return "Password must contain a number"
+    } else if (specialChar === false) {
+        return "Password should contain a special character (e.g., @, #, $, %)"
+    } else {
+        return "Password Created Successfully"
+    }
 }
+console.log(isStrongPassword(""))
+
+console.log("")
 
 // 2
 function formatPercentage(value) {
@@ -122,12 +139,16 @@ function formatPercentage(value) {
 }
 console.log(formatPercentage(100));
 
+console.log("")
+
 // 3
 function calculateCompoundInterest(principal, rate, years) {
     let A = principal * (1 + rate)**years
     return `${A.toFixed(2)}`
 }
 console.log(calculateCompoundInterest(500, 0.5, 2));
+
+console.log("")
 
 // 4
 function canGraduate(credits, gpa) {
@@ -138,6 +159,8 @@ function canGraduate(credits, gpa) {
     }
 }
 console.log(canGraduate(200, 3.5))
+
+console.log("")
 
 // 5
 function reverseWord(sentence) {

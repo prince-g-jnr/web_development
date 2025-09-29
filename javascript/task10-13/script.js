@@ -65,6 +65,8 @@ function getLowest(grades) {
 }
 console.log(getLowest(grades))
 
+console.log("")
+
 function getPassRate(grades) {
     let pass = []
     for (let grade of grades) {
@@ -78,3 +80,62 @@ function getPassRate(grades) {
     return `${averagePassed.toFixed(1)}% of passed student`
 }
 console.log(getPassRate(grades))
+
+console.log("")
+
+// Task 3
+let movies = ["Cleaner", "Fast X", "BeeKeeper", "Lift", "Back in Action"]
+let ratings = [5.2, 5.7, 6.3, 5.5, 5.9]
+
+function addMovie(movie, rating) {
+    movies.push(movie)
+    ratings.push(rating)
+}
+console.log(addMovie("Rebel Ridge", 6.8))
+console.log(movies, ratings)
+
+console.log("")
+
+function getAverageRating() {
+    let total = 0
+    for (let rate of ratings) {
+        total += rate
+    }
+    
+    let average = total / ratings.length
+    return average.toFixed(1)
+}
+console.log(`Average Rating: ${getAverageRating(ratings)}`)
+
+console.log("")
+
+function getTopMovie () {
+    if (movies.length === 0) {
+        return "No Movie available."
+    }
+    let topMovie = movies[0]
+    let highest = ratings[0]
+
+    let i = 0
+    for (let high of ratings) {
+        if (high > highest) {
+            topMovie = movies[i]
+        }
+        i ++
+    } 
+    return `Top Movie: ${topMovie}`
+}
+console.log(getTopMovie())
+
+console.log("")
+
+function summary(movies, ratings) {
+    console.log("===== Movies Ratings Summary =====")
+    let movie =[]
+    let rate = []
+    movie.push(movies)
+    rate.push(ratings)
+    for ( let i = 0; i < [movie.length, rate.length]; i ++) {
+        
+    }
+}
