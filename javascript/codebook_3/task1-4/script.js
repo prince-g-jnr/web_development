@@ -144,3 +144,77 @@ console.log("")
 //     console.log(`Top Movie: ${getTopMovie}` )
 // }
 // console.log(printSummary())
+
+
+// Task 4
+let students = [];
+
+function addStudent(name, grade) {
+    if (grade < 0 || grade > 100) {
+    console.log(`Invalid grade for ${name}.`); 
+    }else {
+    students.push({name: name, grade: grade});
+    } 
+}
+addStudent("Alvin", 70)
+addStudent("Sam", 75)
+addStudent("Chris", 80)
+addStudent("Mason", 85)
+addStudent("John", 90)
+console.log(students)
+
+console.log("")
+
+function calculateAverage() {
+let grades = [];
+    let total = 0;
+    for (let i = 0; i < students.length; i++) {
+        total += students[i].grade;
+  }
+    let average = total / students.length
+    return average;
+}
+console.log("Average Score", calculateAverage())
+
+console.log("")
+
+function findTopStudent() {
+    let topGrade = Math.max(...students.map(s => s.grade));
+    return students.find(s => s.grade === topGrade);
+}
+console.log("Top Student", findTopStudent())
+
+function findBottomStudent() {
+    let bottomGrade = Math.min(...students.map(s => s.grade));
+    return students.find(s => s.grade === bottomGrade);
+}
+console.log("Least Grade", findBottomStudent())
+
+console.log("")
+
+function getLetterGrade(score) {
+    if (score >= 90 || score === 100) {
+    return 'A';
+    } else if (score >= 80 || score === 89){
+        return 'B';
+    } else if (score >= 70 || score === 79){
+        return 'C';
+    } else if  (score >= 60 || score === 69){
+        return 'D';
+    } else if (score >= 0 || score === 59){
+        return 'F';
+    } else {
+        return "Invalid input"
+    }
+}
+console.log(getLetterGrade(98))
+
+  for (let student of students) {
+    console.log(`${student.name}\t\t${student.grade}\t${getLetterGrade(student.grade)}`);
+  }
+
+  console.log("")
+  console.log("=============");
+  console.log(`Class Average: ${calculateAverage()}`);
+  console.log(`Top Student: ${findTopStudent().name} (${findTopStudent().grade})`);
+  console.log(`Lowest Student: ${findBottomStudent().name} (${findBottomStudent().grade})`);
