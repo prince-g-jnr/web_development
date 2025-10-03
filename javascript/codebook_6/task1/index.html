@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Persistent Notes App</h1>
+        <p id="timestamp"></p>
+        <textarea name="text" id="noteArea"></textarea>
+
+        <div class="buttoncont" onclick="saveNote()">
+            <button>
+                Save Note
+            </button>
+            <button class="loadnote" onclick="loadNote()">
+                Load Note
+            </button>
+        </div>
+
+        <div class="message" id="message"></div>
+        
+    </div>
 </body>
 </html>

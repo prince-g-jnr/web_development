@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+textarea{
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+#counted {
+    color: black;
+   display: flex;
+}
+
+.text{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
