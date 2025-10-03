@@ -575,3 +575,8 @@ function typeCheckingPractice() {
     
     document.getElementById('typeof-output').innerHTML = output;
 }
+
+console.log("Hello from console!");
+console.warn("This is a warning");
+console.error("This is an error");
+console.table([{name: "Alice", age: 25}, {name: "Bob", age: 30}])

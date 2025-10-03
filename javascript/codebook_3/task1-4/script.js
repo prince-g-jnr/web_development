@@ -129,13 +129,18 @@ console.log(getTopMovie())
 
 console.log("")
 
-function summary(movies, ratings) {
-    console.log("===== Movies Ratings Summary =====")
-    let movie =[]
-    let rate = []
-    movie.push(movies)
-    rate.push(ratings)
-    for ( let i = 0; i < [movie.length, rate.length]; i ++) {
-        
-    }
-}
+// function printSummary(movies, ratings) {
+//     console.log("===== Movies Ratings Summary =====")
+//     let movie =[]
+//     let rate = []
+//     movie.push(movies)
+//     rate.push(ratings)
+//     for ( let i = 0; i < [movie.length, rate.length]; i ++) {
+//        console.log(`${movie[i]}: ${rate[i]}`) 
+//     }
+//     console.log(`${movie[i]}: ${rate[i]}`)
+
+//     console.log(`Average Rating: ${getAverageRating()}`)
+//     console.log(`Top Movie: ${getTopMovie}` )
+// }
+// console.log(printSummary())
