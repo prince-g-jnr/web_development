@@ -247,4 +247,23 @@ submitOrder();
 
 // Simple Café Example
 // 1. Simulate making coffee (takes 3 seconds)
-function makeCoffee() {}
+function makeCoffee() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("✅ Your coffee is ready!");
+        }, 3000);
+    });
+}
+
+// 2. place an order
+async function orderCoffee() {
+    let output = document.getElementById("output");
+    output.innerHTML = "⏳ Making your coffee... Please wait.";
+
+    try {
+        let result = await makeCoffee(); // wait for the coffee
+        output.innerHTML = result;
+    } catch (error) {
+        output.innerHTML = "❌ Someting went wrong: " + error;
+    }
+}
