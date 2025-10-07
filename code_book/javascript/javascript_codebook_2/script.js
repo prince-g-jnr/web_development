@@ -34,3 +34,9 @@ greetPerson("Bob");
 greetPerson("Charlie");
 
 console.log("");   // Empty line
+
+// Function with multiple parameters
+function introduce(firstName, lastName, age) {
+    console.log(`Hi! I'm ${firstName} ${lastName} and I'm ${age} year old.`);
+}
+
